@@ -27,3 +27,6 @@ The uploaded files are passed through to the Document Conversion API into Answer
 
 ## Demo
 The original data set was culled from the Cranfield collection - http://ir.dcs.gla.ac.uk/resources/test_collections/cran/ So question pertaining to that will be most accurate. We did add a variety of random datasets after that - and you can try it out.
+
+# Running it
+Replace the RR_SA_USERID and RR_SA_PASSWORD with your service credentials from Bluemix. To follow along, you need to complete the tutorial at https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/retrieve-rank/get_start.shtml. Then, replace the SOLR_CLUSTER_ID and you will be all set.
