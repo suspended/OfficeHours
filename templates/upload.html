@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/md5.js"></script>
+	<script src="js/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <script src="https://sonicr.cf/assets/scripts/typed.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script>
+    <script>
+	  $(function(){
+		  $(".typed").typed({
+			strings: ["^300searchable.^300", "insightful.^300", "accessible.^300", "the way it should be.^300"],
+			typeSpeed: 33
+		  });
+	  });
+	</script>
+	<script>
+	$(document).ready(function(){
+		sweetAlert("Here's a Tip!", "We accept uploaded PDF, HTML, and Microsoft Word documents up to 50MB in size.", "info");
+		$("#search").click(function(){
+			$("#search_results").empty();
+			$("#search_results").html("<h1>Here is what we found...</h1>");
+			$.getJSON("/search", {
+				q: document.getElementById("searchquery").value
+			},
+			
+			function(result){
+				$.each(result.response.docs, function(i, field){ 
+					$("#search_results").append("<h3>" + field.title + "</h3>" + "<p>" + field.body + "</p>" + "<br/><br/>");
+				});
+			});
+		});
+	});
+	function uploading() {
+		sweetAlert("Uploading and processing files...", "This might take some time to process depending on the file size.", "info");
+	}
+	</script>
+    <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <title>Office Hours App</title>
+</head>
+<body>
+	
+    <div id="wrapper">
+    <div id="header">
+        <div id="logo">
+        	<img src="images/watson_logo.png" width="50" height="50" alt=""/>
+            <a class="glow" href="/" title="Office Hours App">Office Hours App</a>
+        </div>
+        <div id="navbar">
+            <ul id="nav-right">
+            	<li class="navitem"><a href="#">Students</a></li>
+            	<li class="navitem"><a href="#">Educators</a></li>
+                <li class="navitem"><a href="#">Pricing</a></li>
+                <li class="navitem"><a href="#">Help</a></li>
+                <li class="navitem"><a href="upload" class="emphasize">Upload</a></li>
+          </ul>
+        </div>
+    </div>
+    	<div id="main" class="masthead"><br/><br/>
+        	<h1>upload a document
+            
+            
+            <br/><br/><br/><br/><br/><br/><br/>
+			
+			<div class="fileUpload btn btn-primary btn-lg btn-hero">
+				<span>Pick File</span>
+				<form role="form" action="/magic" method="post" enctype=multipart/form-data>
+				<input type="file" name="file" class="upload" onchange="uploading();this.form.submit()">
+				</form>
+			</div>
+			
+            </h1>
+        </div>
+		
+      <section id="sonicr-advantage">
+		<div id="search_results"><h1>Your Personal Office Hours.</h1></div>
+
+        <br/>
+	
+      </section>
+        
+    </div><!-- END wrapper //-->
+	
+	<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#editor_view').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'accordion',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+		
+        //Horizontal Tab
+        $('#results_view').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_2', // The tab groups identifier
+        });
+
+
+    });
+</script>
+<script>
+jQuery(document).ready(function($){
+	// browser window scroll (in pixels) after which the "back to top" link is shown
+	var offset = 300,
+		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+		offset_opacity = 1200,
+		//duration of the top scrolling animation (in ms)
+		scroll_top_duration = 700,
+		//grab the "back to top" link
+		$back_to_top = $('.cd-top');
+
+	//hide or show the "back to top" link
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > offset_opacity ) { 
+			$back_to_top.addClass('cd-fade-out');
+		}
+	});
+
+	//smooth scroll to top
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: 0 ,
+			}, scroll_top_duration
+		);
+	});
+});
+</script>
+</body>
+</html>

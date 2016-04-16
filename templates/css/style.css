@@ -1,0 +1,250 @@
+#main {
+	border-bottom: solid #5ab1d0;
+
+}
+.masthead {
+  /* HEX 995DB3 2C9BDB */
+  background: linear-gradient(326deg, #995db3, #5ab1d0);
+  background-size: 400% 400%;
+
+  -webkit-animation: masthead-animation 19s ease infinite;
+  -moz-animation: masthead-animation 19s ease infinite;
+  animation: masthead-animation 19s ease infinite;
+  position: relative;
+  text-align: center;
+}
+@-webkit-keyframes masthead-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes masthead-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes masthead-animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.masthead .btn-hero {
+  background-color: transparent;
+  border-color: white;
+  border-width: 3px;
+  color: white;
+  margin-right: 12.5px;
+ font-family: "Open Sans", Calibri, Verdana, Geneva, Helvetica, sans-serif;
+ 
+}
+.masthead .btn-hero:hover {
+  background-color: white;
+  color: #505050;
+}
+.masthead .btn-hero.btn-primary {
+  border-color: #ce4537;
+  color: white;
+  background-color: #ce4537;
+  -webkit-animation: bounce 1s;
+    animation: bounce 1s;
+	-webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+    animation-delay: 2s;
+	-webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+    animation-iteration-count: 3;
+}
+.masthead .btn-hero.btn-primary:hover {
+  background-color: #ce1111;
+  color: white;
+  background-color: #ce1111;
+  border-color: #ce1111;;
+}
+
+/* to show typed.js text */
+.masthead h1 {
+	font-size: 72px;
+	color: rgb(233,233,222);
+	font-family: ProximaNovaLight, Calibri, Verdana, Geneva, Helvetica, sans-serif;
+}
+.typed {
+	display: inline;
+}
+/* code for animated blinking cursor */
+.typed-cursor{
+	opacity: 1;
+	font-weight: 100;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	-ms-animation: blink 0.7s infinite;
+	-o-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-ms-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-o-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: #a93529;
+  border-color: #80281f;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.checked,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #882b21;
+  border-color: #4f1913;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 9px 16px 10px;
+  font-size: 26px;
+  line-height: 1.33;
+  border-radius: 5px;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  padding: 4px 16px 5px;
+  font-size: 26px;
+  line-height: 1.5625;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 20px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.input-lg {
+  height: 32px;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.33;
+  border-radius: 5px;
+  font-family: ProximaNovaLight, Calibri, Verdana, Geneva, Helvetica, sans-serif;
+}
+.form-control.ng-dirty.ng-invalid:not(:focus) {
+  border-color: #ae2d05;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.form-control.ng-dirty.ng-invalid:not(:focus):focus {
+  border-color: #7d2003;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f95420;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f95420;
+}
+.bounce {
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+}
+/* Scroll down indicator (bouncing) */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px); } 
+}
+section {
+	padding-top: 15px;
+	padding-bottom: 50px;
+	width: 976px;
+	margin: 0 auto;
+}
+section p {
+	line-height: 150%;
+	text-align: justify;
+	padding-bottom: 10px;
+}
+h1 {
+	text-align: center;
+	font-size: 2.5em; 
+}
+h2 {
+	font-family: ProximaNovaLight, Calibri, Verdana, Geneva, Helvetica sans-serif;
+	text-align: center;
+	font-weight: 100;
+}
+

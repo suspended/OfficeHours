@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* SIGNUP STYLES */
+section #signup {
+	width: 800px;
+	margin: 0 auto;
+}
+.question_table {
+
+}
+.question_table label {
+	font-size: 16px;
+}
+.question_table td {
+	padding-bottom: 10px;
+}
+.question_table .key {
+	width: 40%;
+	text-align: left;
+	padding-right: 50px;
+}
+.question_table .value {
+	width: 60%;
+}
+/* 	Underlined text boxes
+	from http://callmenick.com/_development/input-text-styles/ 
+*/
+input[type="text"], input[type="email"], input[type="password"] {
+	display: inline-block;
+	margin: 0;
+	font-family: ProximaNova, Calibri, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 16px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	padding: 10px;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	transition: border 0.5s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  outline: none;
+}
+input[type="text"]:focus, input[type="text"].focus,
+ input[type="email"]:focus, input[type="email"].focus,
+ input[type="password"]:focus, input[type="password"].focus {
+  border-bottom: solid 2px #5ab1d0;
+}
+textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: ProximaNova, Calibri, Verdana, Geneva, Helvetica, sans-serif;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+textarea:focus {
+  outline: none;
+}
+textarea:focus, textarea.focus {
+  border-bottom: solid 2px #5ab1d0;
+}
+select {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: ProximaNova, Calibri, Verdana, Geneva, Helvetica, sans-serif;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+select:focus, select.focus {
+  border-bottom: solid 2px #5ab1d0;
+}
+input[type=radio].big-radiobox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; 
+	clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; 
+	border:0;
+}
+input[type=radio].big-radiobox + label.big-label {
+	padding-left:26px;
+	height:21px; 
+	display:inline-block;
+	line-height:21px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:21px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+input[type=radio].big-radiobox:checked + label.big-label {
+	background-position: 0 -21px;
+}
+label.big-label {
+	background-image:url(../images/checkbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+input[type=checkbox].big-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; 
+	clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; 
+	border:0;
+}
+input[type=checkbox].big-checkbox + label.big-label2 {
+	padding-left:26px;
+	height:21px; 
+	display:inline-block;
+	line-height:21px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:21px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+input[type=checkbox].big-checkbox:checked + label.big-label2 {
+	background-position: 0 -21px;
+}
+label.big-label2 {
+	background-image:url(../images/radio.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+input[type=submit].submit_now {
+	width:200px;
+	background-color: #5ab1d0; 
+	padding: 15px 20px 15px 20px;
+	margin-top: 25px;
+	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	font-size:1.5em;
+	font-family: Montserrat, ProximaNova, Calibri, Verdana, Geneva, Helvetica, sans-serif;
+
+	/*give the corners a small curve*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	border: none;
+}
+.frame {
+	height:100px;
+	width:400px;
+	position:absolute;
+}

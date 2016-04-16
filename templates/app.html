@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta property="og:title" content="The Easy Privacy Policy Builder for Everyone"/>
+    <meta property="og:image" content="http://privacy.cf/images/logo.png" />
+    <meta property="og:url" content="http://privacy.cf" />
+    <meta property="og:site_name" content="Privacy Policy Builder"/>
+    <meta property="og:description" content="Privacy Policy Builder is an easy to use tool that generates fast, beautiful, readable privacy policies for everyone."/>
+    <meta itemprop="name" content="HotForex - The Easy Privacy Policy Builder for Everyone" />
+    <meta itemprop="description" content="Privacy Policy Builder is an easy to use tool that generates fast, beautiful, readable privacy policies for everyone." />
+    <meta itemprop="image" content="http://privacy.cf/images/logo.png" />
+    
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms.css" />
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script>
+    <script>
+	TogetherJSConfig_cloneClicks = true
+	TogetherJSConfig_suppressJoinConfirmation = true
+	TogetherJSConfig_disableWebRTC = true
+	//TogetherJSConfig_findRoom = {prefix: "unique_has_of_user", max: 5}
+	</script>
+    <script>
+	// Parse URL Parameters
+	var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+		}
+	};
+	var name = getUrlParameter('name');
+	var shownRawHTMLWarning = false;
+	editingMode = "Build";	// Build, Design or Raw
+	final_html = "";
+	</script>
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+    <script src="//fast.eager.io/KfsIKqXMBt.js"></script>
+    <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <title>Privacy Policy Generator</title>
+</head>
+<body>
+	
+    <div id="wrapper">
+    <div id="header">
+        <div id="logo">
+        	<img src="images/logo.png" width="50" height="50" alt=""/>
+            <a class="glow" href="index.html?ref=logo" title="Privacy Policy Builder">Privacy Policy Builder</a>
+        </div>
+        <div id="navbar">
+            <ul id="nav-right">
+            	<li class="navitem"><a href="#" onclick="TogetherJS(this); return false;" id="collabstep">Collaborate</a></li>
+            	<li class="navitem"><a href="templates.html" onclick="templates(); return false;">Templates</a></li>
+                <li class="navitem"><a href="account.html" onclick="account(); return false;">Account</a></li>
+                <li class="navitem"><a href="help.html" onclick="help(); return false;">Help</a></li>
+                <li class="navitem"><a href="signup.html" onclick="deploy(); return false;" class="emphasize" id="deploystep">Deploy</a></li>
+          </ul>
+        </div>
+    </div>
+    	<div id="main">
+          <div id="editor-view">
+                <div id="editor_view">
+                    <ul class="resp-tabs-list hor_1">
+                        <li>Build</li>
+                        <li>Design</li>
+                        <li>Raw</li>
+                    </ul>
+                    <div class="resp-tabs-container hor_1">
+                        <div>
+                            <p>
+                                <!--vertical Tabs-->
+        
+                          <div id="build_accordion">
+                                    <ul class="resp-tabs-list ver_1">
+                                        <li>Basic Information</li>
+                                        <li>Data Collection</li>
+                                        <li>Data Sharing</li>
+                                        <li>Data Protection</li>
+                                    </ul>
+                                    <div class="resp-tabs-container ver_1">
+                                  
+                                        <div>
+                                        <table class="question_table">
+                                    <tr>
+                                        <td class="key"><label for="first_name">Company Name:</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="text" name="CustomFields[2]" id="company_name" maxlength="100" size="50" minlength="2"></td></tr>
+                                
+                                    <tr>
+                                        <td class="key"><label for="last_name">Company Address:</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="text" name="CustomFields[3]" id="company_address" maxlength="100" size="50"></td></tr>
+                                    </tr>
+                                    </table>
+                                        </div>
+                                        <div>
+                                            <table class="question_table">
+                                    <tr>Please tell us if you intend to collect the aforementioned information from website users.<br/>
+                                        <td class="key"><label for="first_name">Contact Information</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectContacts">
+                                        <input type="text" name="CustomFields[3]" id="contact_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                
+                                    <tr>
+                                        <td class="key"><label for="last_name">Location Data</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectLocation">
+                                        <input type="text" name="CustomFields[3]" id="location_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Browser History</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectBrowser">
+                                        <input type="text" name="CustomFields[3]" id="browser_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">User Files</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectFiles">
+                                        <input type="text" name="CustomFields[3]" id="files_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Demographical Info</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectDemographics">
+                                        <input type="text" name="CustomFields[3]" id="demo_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Biometric data</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectBiometrics">
+                                        <input type="text" name="CustomFields[3]" id="biometric_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    </table>
+                                        </div>
+                                        <div>
+                                            <table class="question_table">
+                                    <tr>Please tell us who you intend to share the data with.<br/>
+                                        <td class="key"><label for="first_name">Carriers</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="shareCarriers">
+                                        <input type="text" name="CustomFields[3]" id="carrier_desc" maxlength="100" size="50" placeholder="Describe what you share specifically">
+                                        </td></tr>
+                                
+                                    <tr>
+                                        <td class="key"><label for="last_name">Government</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="shareGovernment">
+                                        <input type="text" name="CustomFields[3]" id="government_desc" maxlength="100" size="50" placeholder="Describe what you share specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Data Resellers</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectBrowser">
+                                        <input type="text" name="CustomFields[3]" id="browser_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Data Analytics Companies</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectFiles">
+                                        <input type="text" name="CustomFields[3]" id="files_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Systems and Platforms</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectDemographics">
+                                        <input type="text" name="CustomFields[3]" id="demo_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Social Networks</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectBiometrics">
+                                        <input type="text" name="CustomFields[3]" id="biometric_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Ad Networks</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectBiometrics">
+                                        <input type="text" name="CustomFields[3]" id="biometric_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><label for="last_name">Other Apps</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="checkbox" id="collectBiometrics">
+                                        <input type="text" name="CustomFields[3]" id="biometric_desc" maxlength="100" size="50" placeholder="Describe what you collect specifically">
+                                        </td></tr>
+                                    </tr>
+                                    </table>
+                                        </div>
+                                        <div>
+                                            <table class="question_table">
+                                    <tr>
+                                        <td class="key"><label for="first_name">Can users deactivate their account?</label></td>
+                                        <td class="value"><input type="text" name="CustomFields[2]" id="company_name" maxlength="100" size="50" minlength="2" placeholder="Answer YES or NO only"></td></tr>
+                                        <tr>
+                                        <td class="key"><label for="first_name">&ensp; &ensp; If yes, please provide a link.</label></td>
+                                        <td class="value"><input type="text" name="CustomFields[2]" id="company_name" maxlength="100" size="50" minlength="2" placeholder="URL to deactivate account"></td></tr>
+                                
+                                    <tr>
+                                        <td class="key"><label for="last_name">Can users delete their account?</label></td>
+                                        <td class="value"><input type="text" name="CustomFields[3]" id="company_address" maxlength="100" size="50" placeholder="Answer YES or NO only"></td></tr><tr>
+                                        <td class="key"><label for="first_name">&ensp; &ensp; If yes, please provide a link.</label></td>
+                                        <td class="value"><input type="text" name="CustomFields[2]" id="company_name" maxlength="100" size="50" minlength="2" placeholder="URL to delete account"></td></tr>
+                                    </tr>
+                                    </table>
+                                        </div>
+                                    </div>
+                          </div>
+                            </p>
+                        </div>
+                        <div>
+                           Choose how your privacy policy will look like.
+                           <div id="design_accordion">
+                                    <ul class="resp-tabs-list ver_1">
+                                        <li>Corporate Identity</li>
+                                        <li>Overall Look</li>
+                                    </ul>
+                                    <div class="resp-tabs-container ver_1">
+                                  
+                                        <div>
+                                        <table class="question_table">
+                                    <tr>
+                                        <td class="key"><label for="first_name">Coroporate Logo:</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="text" name="CustomFields[5]" id="company_image" maxlength="100" size="50" minlength="2" placeholder="Insert Image URL"></td></tr>
+                                
+                                    <tr>
+                                        <td class="key"><label for="last_name">Corporate Slogan:</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="text" name="CustomFields[4]" id="company_slogan" maxlength="100" size="50"></td></tr>
+                                    </tr>
+                                    </table>
+                                        </div>
+                                        <div>
+                                            <table class="question_table">
+                                    <tr>
+                                        <td class="key"><label for="first_name">Privacy Policy Title:</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="text" name="CustomFields[5]" id="policy_title" maxlength="100" size="50" minlength="2" placeholder="Default is 'Simple Privacy Policy'"</tr>
+                                
+                                    <tr>
+                                        <td class="key"><label for="last_name">Color:</label> <font color="red"><sup>*</sup></font></td>
+                                        <td class="value"><input type="text" name="CustomFields[4]" id="css_color" maxlength="100" size="50" placeholder="Example: #FFFFFF"></td></tr>
+                                    </tr>
+                                    </table>
+                                        </div>
+                                        
+                                    </div>
+                          </div>
+                        </div>
+                        <div>
+                            <div id="editor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          <div id="results-view">
+                <div id="results_view">
+                    <ul class="resp-tabs-list hor_2">
+                        <li>Simple</li>
+                        <li>Detailed</li>
+    
+                    </ul>
+                    <div class="resp-tabs-container hor_2">
+                        <div>
+                            <iframe id="simple-policy" sandbox="allow-forms allow-popups allow-scripts allow-same-origin" frameborder="1" height="600">
+                            	#document
+                            </iframe>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        </div>
+                        <div>
+                            <iframe id="detailed-policy" sandbox="allow-forms allow-popups allow-scripts allow-same-origin" frameborder="1" height="600">
+                            	#document
+                            </iframe>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END results //-->
+        </div>
+    </div><!-- END wrapper //-->
+	
+	<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#editor_view').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+			activate: function(event) { // Callback function if tab is switched
+				var $tab = $(this);
+				if($tab.text() == 'Raw' && shownRawHTMLWarning == false) { 
+					swal("Danger ahead!", "Editing raw HTML might break your build if you do not know what you are doing. \n\n Proceed with extreme caution.", "error");
+					shownRawHTMLWarning = true;
+					editingMode = "Raw";
+				}
+				if($tab.text() == 'Design') { 
+					swal("Account Upgrade Needed", "This is a premium feature. Please upgrade your account to customize your design options.", "info");
+					editingMode = "Build";
+				}
+				if($tab.text() == 'Build') { 
+					editingMode = "Build";
+				}
+            }
+        });
+
+        // Child Tab
+        $('#build_accordion').easyResponsiveTabs({
+            type: 'accordion',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+		
+		// Child Tab
+        $('#design_accordion').easyResponsiveTabs({
+            type: 'accordion',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+		
+        //Horizontal Tab
+        $('#results_view').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_2', // The tab groups identifier
+        });
+
+
+    });
+	
+	function templates() {
+		sweetAlert("Oops...", "Something went wrong when Node.js was trying to show you: TEMPLATES", "error");
+	}
+	
+	function account() {
+		sweetAlert("Oops...", "Something went wrong when Node.js was trying to show you: ACCOUNT", "error");
+	}
+	
+	function help() {
+		sweetAlert("Oops...", "Something went wrong when Node.js was trying to show you: HELP", "error");
+	}
+	
+	function deploy() {
+		swal({   
+			title: "Confirm Policy Deployment",   
+			text: "This will place your privacy policy on the public web for all to see. Confirm?",  
+			type: "info",   
+			showCancelButton: true,   
+			closeOnConfirm: false,   
+			showLoaderOnConfirm: true, 
+		}, function(){  
+		 	setTimeout(function(){
+				deployAll(name);
+				swal("Done!", "That didn't take too long, did it?. Your privacy policy is now viewable at <NODEJS_DEPLOYMENT_SUBDOMAIN>!", "success");   }, 2000); });
+	}
+	
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.2/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/html");
+</script>
+<script src="js/live.js"></script>
+<script src="js/FileSaver.js"></script>
+<script src="js/jszip.js"></script>
+<script>
+function deployAll(name) {
+	var zip = new JSZip();
+	zip.file("policy.html", ace.edit("editor").getSession().getValue());
+	var content = zip.generate({type:"blob"});
+	// see FileSaver.js
+	saveAs(content, "policy-"+name+".zip");
+}
+</script>
+</body>
+</html>

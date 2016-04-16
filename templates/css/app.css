@@ -1,0 +1,258 @@
+@charset "utf-8";
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic,700,300italic,300);
+@font-face { 
+	font-family: ProximaNova; src: url('fonts/ProximaNova-Regular.otf'); 
+}
+@font-face { 
+	font-family: ProximaNovaLight; src: url('fonts/ProximaNova-Light.otf'); 
+}
+@font-face { 
+	font-family: Usuzi; src: url('fonts/usuzi.otf'); 
+}
+body {
+	font-family: ProximaNova, Calibri, Verdana, Geneva, Helvetica sans-serif;
+	margin: 0;
+	position: relative;
+	/* show scrollbars all the time so page won't be offset */
+
+}
+#wrapper {
+	width: 100%;
+}
+#header {
+	width: 96%;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 75px;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+#logo {
+	font-family: ProximaNova, Calibri, Verdana, Geneva, Helvetica sans-serif;
+	font-size: 32px;
+	color: rgb(0,0,0);
+	float:left;
+	padding-top: 10px;
+
+}
+#logo img {
+	height: 50px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+a.glow, a.glow:hover, a.glow:focus {
+	text-decoration: none;
+	color: rgb(0,0,0);
+	text-shadow: none;
+	-webkit-transition: 100ms linear 0s;
+	-moz-transition: 100ms linear 0s;
+	-o-transition: 100ms linear 0s;
+	transition: 100ms linear 0s;
+	outline: 0 none;
+	vertical-align: middle;
+	line-height: 50px;
+	
+}
+a.glow:hover, a.glow:focus {
+	color: rgb(255,140,0);
+	text-shadow: -1px 1px 8px #ddd, 1px -1px 8px #ddd;
+	cursor: pointer; 
+	cursor: hand;
+	vertical-align: middle;
+	line-height: 50px;
+}
+#navbar {
+	float:right;
+	padding-top: 10px;
+}
+.navitem {
+	display: inline;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: right;
+	padding-right: 20px;
+}
+.navitem a:link, .navitem a:visited, .navitem a:active {
+	color: rgb(155,155,155);
+	text-decoration: none;
+}
+.navitem a:hover {
+	color: rgb(55,55,55);
+	text-decoration: none;
+}
+.emphasize {
+	color: rgb(255,140,0) !important;
+
+}
+a.emphasize:hover{
+	color: rgb(255,140,0) !important;
+	font-weight: bolder;
+}
+#main {
+	border-top: solid #5ab1d0;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 145%;
+	padding-top: 25px;
+	padding-bottom: 100px;
+	height:100%;
+}
+#editor-view {
+	float:left;
+	width: 45%;
+	overflow:hidden;
+	padding-left: 2%;
+	height:100%;
+}
+#results-view {
+    float:left;
+	width:50%;
+	overflow:hidden;
+	padding-left: 1%;
+	height:100%;
+}
+#simple-policy {
+	height: 75vh;
+	width: 100%;
+	float:right;
+}
+#detailed-policy {
+	height: 75vh;
+	width: 100%;
+	float:right;
+}
+#footer {
+	color: rgb(111,111,111);
+	position: relative;
+	width: 976px;
+	margin: 0 auto;
+	padding-top: 0px;
+	padding-bottom: 120px;
+	line-height: 150%;
+}
+#footer #copyright {
+	float:left;
+}
+#footer #footer-links {
+	padding-top: 26px;
+	float:right;
+}
+#footer a:link, #footer a:visited, #footer a:active {
+	color: rgb(155,155,155);
+	text-decoration: none;
+}
+#footer #footer-links a:hover {
+	color: rgb(55,55,55);
+	text-decoration: none;
+}
+h1 {
+	font-family: Montserrat, ProximaNova, Calibri, Verdana, Geneva, Helvetica sans-serif;
+}
+.help-tip{
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	text-align: center;
+	background-color: #BCDBEA;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	font-size: 14px;
+	line-height: 26px;
+	cursor: default;
+}
+
+.help-tip:before{
+	content:'?';
+	font-weight: bold;
+	color:#fff;
+}
+
+.help-tip:hover p{
+	display:block;
+	transform-origin: 100% 0%;
+
+	-webkit-animation: fadeIn 0.3s ease-in-out;
+	animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{	/* The tooltip */
+	display: none;
+	text-align: left;
+	background-color: #1E2021;
+	padding: 20px;
+	width: 300px;
+	position: absolute;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	right: -4px;
+	color: #FFF;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+	position: absolute;
+	content: '';
+	width:0;
+	height: 0;
+	border:6px solid transparent;
+	border-bottom-color:#1E2021;
+	right:10px;
+	top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+	width:100%;
+	height:40px;
+	content:'';
+	position: absolute;
+	top:-40px;
+	left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+	0% { 
+		opacity:0; 
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity:100%;
+		transform: scale(1);
+	}
+}
+@keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:100%; }
+}
+#editor { 
+    height: 77vh;
+    width: 100%;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
